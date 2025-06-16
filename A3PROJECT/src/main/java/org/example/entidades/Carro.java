@@ -2,24 +2,15 @@ package org.example.entidades;
 
 public class Carro extends Veiculo{
 
-    private Integer id;
     private Integer numeroDePortas;
     private String tipoDeCombustivel;
 
-    public Carro(String marca, String modelo, Integer ano, Integer numeroDePortas, String tipoDeCombustivel, Integer id) {
+    public Carro(String marca, String modelo, Integer ano, Integer numeroDePortas, String tipoDeCombustivel) {
         super(marca, modelo, ano);
-        this.id = id;
         this.numeroDePortas = numeroDePortas;
         this.tipoDeCombustivel = tipoDeCombustivel;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Integer getNumeroDePortas() {
         return numeroDePortas;
@@ -37,12 +28,11 @@ public class Carro extends Veiculo{
         this.tipoDeCombustivel = tipoDeCombustivel;
     }
 
+
     @Override
-    public String getDescription(){
-        return "id: " + id + "Marca " + getMarca() + " Modelo: " + getModelo()
+    public String toString() {
+        return "Marca " + getMarca() + " Modelo: " + getModelo()
                 + " ano: " + getAno() + " Numero de portaas: " + numeroDePortas
                 + "tipo de combustivel: " + tipoDeCombustivel;
     }
-
-
 }
